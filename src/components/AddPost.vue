@@ -25,6 +25,7 @@
 </template>
 
 <script>
+import { mapActions } from "vuex"
 export default {
   name: "addPost",
   data() {
@@ -33,17 +34,19 @@ export default {
         id: "",
         name: "",
         phone: "",
-        weight: 0
+        weight: 0,
+        state: "未取件"
       }
     };
   },
   methods: {
-      add() {
-
-      },
-      reset() {
-          this.$router.push("/");
-      }
+    add() {
+      this.$store.dispatch("addPost", this.post);
+      this.$router.push("/postList");
+    },
+    reset() {
+      this.$router.push("/postList");
+    }
   }
 };
 </script>

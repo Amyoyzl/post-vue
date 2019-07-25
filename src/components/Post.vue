@@ -1,5 +1,5 @@
 <template>
-  <div id="container">
+  <div>
     <el-container>
       <el-header>
         <v-head />
@@ -22,10 +22,5 @@ export default {
 };
 </script>
 
-<style scoped>
-#container{
-  margin: 0 10vw;
-}
-</style>
 
 
