@@ -5,5 +5,5 @@ export default {
     },
     [types.ADD_POST]: (state, post) => {
         state.posts.push(post);
-    }
+    },
 }

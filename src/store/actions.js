@@ -17,11 +17,13 @@ export default {
         commit(types.LOAD_POSTS, result.data);
     },
     async setPostTime({ commit }, post) {
-        const result = await setPostTime(post.id, post.time);
+        await setPostTime(post.id, post.time);
+        const result = await getPosts();
         commit(types.LOAD_POSTS, result.data);
     },
     async setPostState({ commit }, post) {
-        const result = await setPostState(post.id, post.state);
+        await setPostState(post.id, post.state);
+        const result = await getPosts();
         commit(types.LOAD_POSTS, result.data);
     }
 }
