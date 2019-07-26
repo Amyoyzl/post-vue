@@ -25,7 +25,7 @@ export const getPostsByState = (state) => {
 
 export const setPostTime = (id, time) => {
     return request({
-        url: '/packages/{id}',
+        url: `/packages/${id}`,
         method: 'patch',
         params: { "time": time }
     })
@@ -33,7 +33,7 @@ export const setPostTime = (id, time) => {
 
 export const setPostState = (id, state) => {
     return request({
-        url: '/packages/{id}',
+        url: `/packages/${id}`,
         method: 'patch',
         params: { "state": state }
     })
